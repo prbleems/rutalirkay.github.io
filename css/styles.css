@@ -1,366 +1,425 @@
 /* Reset básico y tipografía */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #555;
-    background: #f7f7f7;
-  }
-  
-  /* Contenedor General */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-  }
-  
-  /* Navbar */
-  .navbar {
-    background: rgba(255, 255, 255, 0.95);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #ff6600;
-  }
-  
-  /* Menú */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #3E2723;
+  background: #ffffff;
+}
+
+/* Contenedor General */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Navbar */
+.navbar {
+  background: #FFD600;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3E2723;
+}
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Menú */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav-menu li {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.nav-menu a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #3E2723;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: #5D4037;
+}
+
+/* WhatsApp link con icono */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #25d366;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.whatsapp-link:hover {
+  background: #1ebe57;
+}
+.icon-whatsapp {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+}
+.mobile-menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #3E2723;
+  border-radius: 3px;
+}
+
+/* Hero */
+.hero {
+  background: url('images/hero-image.jpg') no-repeat center/cover;
+  height: 100vh;
+  position: relative;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 50px 30px;
+  border-radius: 10px;
+}
+.hero-title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.hero-title strong {
+  color: #81C784;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+.btn {
+  background: #3E2723;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #5D4037;
+}
+
+/* Sections */
+.about, .rooms, .contact {
+  background: #fff;
+  margin-top: 60px;
+  padding: 80px 0;
+}
+.about h2, .rooms h2, .contact h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.4rem;
+  color: #3E2723;
+}
+.about p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #666;
+  text-align: center;
+}
+.about img {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Rooms */
+.room-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.room {
+  flex: 1 1 300px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.room img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.room h3 {
+  color: #3E2723;
+  margin-bottom: 10px;
+}
+.room p {
+  color: #666;
+}
+
+/* Contact */
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.contact-wrapper form {
+  flex: 1;
+  max-width: 500px;
+}
+.contact form label {
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.contact form button {
+  margin-top: 15px;
+}
+
+/* WhatsApp box */
+.whatsapp-box {
+  flex: 1;
+  max-width: 350px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+.whatsapp-box h3 {
+  color: #3E2723;
+  margin-bottom: 10px;
+}
+.whatsapp-box p {
+  color: #555;
+  margin-bottom: 20px;
+}
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-whatsapp:hover {
+  background: #1ebe57;
+}
+
+/* Footer */
+footer {
+  background: #FAFAFA;
+  padding: 40px 0;
+  border-top: 5px solid #81C784;
+}
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+.footer-info,
+.footer-map {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+.footer-info p {
+  margin: 8px 0;
+  color: #3E2723;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.footer-info strong {
+  color: #3E2723;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #81C784;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.social-link:hover {
+  color: #5D4037;
+}
+.social-link .icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.footer-map {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.footer-map iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  display: block;
+}
+.footer-copy {
+  text-align: center;
+  padding: 20px 0 30px;
+  background: #FAFAFA;
+}
+.footer-copy p {
+  margin: 0;
+  color: #3E2723;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Selector de idioma */
+.lang-selector {
+  position: relative;
+  display: inline-block;
+}
+.lang-btn {
+  background: transparent;
+  border: 1px solid #3E2723;
+  color: #3E2723;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.lang-btn:hover {
+  background: rgba(0,0,0,0.05);
+}
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  padding: 5px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1001;
+}
+.lang-menu li {
+  margin: 0;
+}
+.lang-menu button {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  color: #3E2723;
+  cursor: pointer;
+}
+.lang-menu button:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mobile-menu-toggle { display: flex; }
   .nav-menu {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-menu li {
-    margin-left: 30px;
-  }
-  
-  .nav-menu a {
-    font-size: 1rem;
-    color: #555;
-    font-weight: 500;
-    transition: color 0.3s;
-    text-decoration: none; /* Quita subrayado */
-  }
-  
-  .nav-menu a:hover,
-  .nav-menu a:focus {
-    color: #ff6600;
-    text-decoration: none;
-  }
-  
-  /* Botón de WhatsApp en la navbar */
-  .nav-menu .whatsapp-link {
-    background: #25d366;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background 0.3s;
-    text-decoration: none;
-  }
-  
-  .nav-menu .whatsapp-link:hover {
-    background: #1ebe57;
-  }
-  
-  /* Botón de menú móvil (hamburguesa) */
-  .mobile-menu-toggle {
     display: none;
-    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #E3F2FD;
     flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-  }
-  
-  .mobile-menu-toggle span {
-    display: block;
-    height: 3px;
-    background: #555;
-    border-radius: 3px;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: url('images/hero-image.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding-top: 60px; /* Compensa la navbar fija */
+    padding: 20px 0;
   }
-  
-  .hero-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 50px 30px;
-    border-radius: 10px;
-    max-width: 700px;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    color: #ddd;
-    margin-bottom: 30px;
-  }
-  
-  .btn {
-    background: #ff6600;
-    color: #fff;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.3s;
-    text-decoration: none;
-  }
-  
-  .btn:hover {
-    background: #e65c00;
-  }
-  
-  /* Secciones: About, Rooms, Contact */
-  .about, .rooms, .contact {
-    padding: 80px 0;
-    background: #fff;
-    margin-top: 60px;
-  }
-  
-  .about h2, .rooms h2, .contact h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.4rem;
-    color: #333;
-  }
-  
-  /* About Section */
-  .about p {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    text-align: center;
-  }
-  
-  .about img {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
-    margin: 0 auto;
-  }
-  
-  /* Rooms Section */
-  .room-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  
-  .room {
-    flex: 1 1 300px;
-    background: #fafafa;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .room img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .room h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .room p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  /* Contact Section */
-  .contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
+  .nav-menu.active { display: flex; }
+  .nav-menu li { margin: 10px 0; }
+
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+
+  .about h2, .rooms h2, .contact h2 { font-size: 2rem; }
+  .contact-wrapper { flex-direction: column; align-items: flex-start; }
+  .contact-wrapper form,
+  .whatsapp-box { max-width: 100%; }
+
+  .footer-flex {
     flex-direction: column;
   }
-  
-  .contact form label {
-    font-weight: 500;
-    margin: 15px 0 5px;
+  .footer-info,
+  .footer-map {
+    max-width: 100%;
   }
-  
-  .contact form input,
-  .contact form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+  .footer-copy {
+    padding: 15px 0 20px;
   }
-  
-  .contact form textarea {
-    resize: vertical;
-    min-height: 150px;
-  }
-  
-  .contact form button {
-    margin-top: 25px;
-  }
-  
-  /* Área de Contacto con dos columnas: formulario y WhatsApp */
-  .contact-wrapper {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .contact-wrapper form {
-    flex: 1;
-    max-width: 500px;
-  }
-  
-  .whatsapp-box {
-    flex: 1;
-    max-width: 350px;
-    background: #fafafa;
-    border: 1px solid #eee;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .whatsapp-box h3 {
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-    color: #333;
-  }
-  
-  .whatsapp-box p {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #555;
-    text-align: center;
-  }
-  
-  .btn-whatsapp {
-    display: inline-block;
-    background: #25d366;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-whatsapp:hover {
-    background: #1ebe57;
-  }
-  
-  /* Footer */
-  footer {
-    background: #333;
-    color: #eee;
-    padding: 30px 0;
-    text-align: center;
-  }
-  
-  .footer-container p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
-  .social a {
-    font-size: 1rem;
-    color: #ff6600;
-    margin: 0 10px;
-    transition: color 0.3s;
-  }
-  
-  .social a:hover {
-    color: #fff;
-  }
-  
-  /* Adaptabilidad: Navbar y menú móvil */
-  @media (max-width: 768px) {
-    .nav-menu li {
-      margin-left: 15px;
-    }
-    /* Muestra el botón de menú móvil */
-    .mobile-menu-toggle {
-      display: flex;
-    }
-    /* Oculta el menú por defecto en móvil */
-    .nav-menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background: rgba(255, 255, 255, 0.95);
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    /* Muestra el menú al agregar la clase .active */
-    .nav-menu.active {
-      display: flex;
-    }
-    .nav-menu li {
-      margin: 10px 0;
-    }
-    .hero h1 {
-      font-size: 2.2rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
-    .about h2, .rooms h2, .contact h2 {
-      font-size: 2rem;
-    }
-    .contact-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .whatsapp-box,
-    .contact-wrapper form {
-      max-width: 100%;
-    }
-  }
-  
+}

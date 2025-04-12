@@ -2,55 +2,96 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hostal Rutalircay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título -->
+  <title>Hostal Rutalircay – Confort y Naturaleza en Pucón</title>
+
+  <!-- Meta Descripción -->
+  <meta name="description" content="Hostal Rutalircay en Pucón: habitaciones confortables, atención personalizada y un entorno natural único. Reserva tu estancia hoy.">
+
+  <!-- Palabras clave -->
+  <meta name="keywords" content="Hostal, Pucón, Chile, alojamiento, naturaleza, habitaciones, turismo">
+
+  <!-- Autor -->
+  <meta name="author" content="Hostal Rutalircay">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.tusitio.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tusitio.com/">
+  <meta property="og:title" content="Hostal Rutalircay – Confort y Naturaleza en Pucón">
+  <meta property="og:description" content="Disfruta de habitaciones acogedoras y atención de primera en un entorno natural incomparable en Pucón.">
+  <meta property="og:image" content="https://www.tusitio.com/images/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.tusitio.com/">
+  <meta name="twitter:title" content="Hostal Rutalircay – Confort y Naturaleza en Pucón">
+  <meta name="twitter:description" content="Disfruta de habitaciones acogedoras y atención de primera en un entorno natural incomparable en Pucón.">
+  <meta name="twitter:image" content="https://www.tusitio.com/images/og-image.jpg">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css">
-  <!-- SweetAlert2 -->
+  <!-- SweetAlert2 (para alertas de formulario) -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- (Opcional) Si sigues usando EmailJS o FormSubmit, deja el bloque de JS correspondiente -->
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-          <div class="container nav-container">
-            <div class="logo">Rutalircay Hostal</div>
-            <!-- Botón de menú móvil -->
-            <div class="mobile-menu-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <ul class="nav-menu">
-              <li><a href="#home">Inicio</a></li>
-              <li><a href="#about">Sobre Nosotros</a></li>
-              <li><a href="#rooms">Habitaciones</a></li>
-              <li><a href="#contact">Contacto</a></li>
-              <li><a href="https://wa.me/521234567890" target="_blank" class="whatsapp-link">WhatsApp</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      
 
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <img src="images/logo-icon.png" alt="Icono Rutalircay" class="logo-icon">
+          <span class="logo-text">Rutalircay Hostal</span>
+        </div>
+        <div class="mobile-menu-toggle">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#rooms">Habitaciones</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li>
+            <a href="https://wa.me/521234567890" target="_blank" class="whatsapp-link">
+              <!-- SVG WhatsApp -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.52 3.48a11.9 11.9 0 0 0-16.84 0 11.9 11.9 0 0 0 0 16.84l-1.45 5.3 5.46-1.43a11.9 11.9 0 0 0 16.83-16.83zM12 21.75a9.74 9.74 0 0 1-4.96-1.37l-.35-.21-3.24.85.86-3.15-.23-.36A9.74 9.74 0 1 1 12 21.75zm5.38-7.88c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.18.2-.36.22-.67.07a7.02 7.02 0 0 1-2.07-1.28 7.67 7.67 0 0 1-1.42-1.75c-.15-.28 0-.43.12-.57.12-.12.28-.3.42-.45.14-.15.18-.26.28-.43.1-.18.05-.34-.02-.49-.07-.15-.68-1.65-.93-2.26-.24-.6-.49-.52-.68-.53h-.58a1.4 1.4 0 0 0-1.03.48c-.35.37-1.34 1.31-1.34 3.19s1.37 3.7 1.56 3.95c.18.24 2.7 4.2 6.56 5.88a28.3 28.3 0 0 0 2.54.66c.34.08.67.06.92.04.28-.02.86-.35.98-.69.12-.34.12-.63.08-.69-.04-.06-.15-.1-.3-.17z"/>
+              </svg>
+              WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Hero -->
   <section id="home" class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Bienvenidos a Hostal Rutalircay</h1>
-      <p>Descubre una experiencia única rodeado de naturaleza y confort.</p>
-      <a href="#contact" class="btn">Contáctanos</a>
+      <h1 class="hero-title">¡Bienvenidos a <strong>Rutalircay Hostal</strong>!</h1>
+      <p class="hero-subtitle">Disfruta de una experiencia única entre naturaleza y confort.</p>
+      <a href="#contact" class="btn">Reserva Ahora</a>
     </div>
   </section>
 
+  <!-- Sobre Nosotros -->
   <section id="about" class="about">
     <div class="container">
       <h2>Sobre Nosotros</h2>
-      <p>Conoce la historia, misión y valores que nos distinguen. Nuestro hostal ofrece un ambiente relajado y auténtico ideal para tu descanso.</p>
+      <p>Conoce nuestra historia y descubre por qué nuestro hostal es el lugar ideal para relajarte y conectarte con la naturaleza.</p>
       <img src="images/about.jpg" alt="Imagen representativa del hostal">
     </div>
   </section>
 
+  <!-- Habitaciones -->
   <section id="rooms" class="rooms">
     <div class="container">
       <h2>Habitaciones</h2>
@@ -58,92 +99,82 @@
         <div class="room">
           <img src="images/habitacion1.jpg" alt="Habitación individual">
           <h3>Habitación Individual</h3>
-          <p>Espacio y confort para viajeros solitarios.</p>
+          <p>Espacio íntimo y confortable para viajeros solitarios.</p>
         </div>
         <div class="room">
           <img src="images/habitacion2.jpg" alt="Habitación doble">
           <h3>Habitación Doble</h3>
-          <p>Ideal para parejas o amigos que viajan juntos.</p>
+          <p>Ideal para parejas o amigos que buscan comodidad y estilo.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Contacto -->
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contacto</h2>
       <div class="contact-wrapper">
-        <!-- Columna Izquierda: Formulario -->
-        <form id="contactForm" action="https://formsubmit.co/mateomartinezsem@gmail.com" method="POST">
+        <form id="contactForm" action="https://formsubmit.co/tucorreo@dominio.com" method="POST">
           <input type="hidden" name="_captcha" value="false">
           <label for="name">Nombre:</label>
           <input type="text" id="name" name="name" required>
-          
           <label for="email">Correo Electrónico:</label>
           <input type="email" id="email" name="email" required>
-          
           <label for="message">Mensaje:</label>
           <textarea id="message" name="message" required></textarea>
-          
           <button type="submit" class="btn">Enviar</button>
         </form>
-  
-        <!-- Columna Derecha: WhatsApp -->
         <div class="whatsapp-box">
-          <h3>Contáctanos por WhatsApp</h3>
-          <p>Haz clic en el botón para chatear con nosotros.</p>
-          <!-- Ajusta el número de teléfono en la URL de WhatsApp -->
-          <a href="https://wa.me/521234567890" target="_blank" class="btn-whatsapp">
-            Abrir WhatsApp
-          </a>
+          <h3>¿Prefieres WhatsApp?</h3>
+          <p>Chatea con nosotros de forma rápida y sencilla.</p>
+          <a href="https://wa.me/521234567890" target="_blank" class="btn-whatsapp">Abrir WhatsApp</a>
         </div>
       </div>
     </div>
   </section>
-  
-  
 
-  
-
+  <!-- Footer -->
   <footer>
-    <div class="container footer-container">
-      <p>&copy; 2025 Rutalircay Hostal. Todos los derechos reservados.</p>
-      <div class="social">
-        <a href="https://www.instagram.com/rutalircay/?hl=es" target="_blank">Instagram</a>
+    <div class="container footer-flex">
+      <!-- Columna 1: Información -->
+      <div class="footer-info">
+        <p><strong>Dirección:</strong> Camino Internacional s/n, Pucón, Chile</p>
+        <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
+        <p><strong>Horario de Atención:</strong> Lunes a Domingo, 8:00 – 22:00</p>
+        <div class="social">
+          <a href="https://www.instagram.com/rutalircay/?hl=es" target="_blank" class="social-link">
+            <!-- SVG Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.5-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+            </svg>
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/rutalircay" target="_blank" class="social-link">
+            <!-- SVG Facebook -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13.5 2.25h-3A5.25 5.25 0 0 0 5.25 7.5v3H3v4.5h2.25v7.5H10.5v-7.5h3l.75-4.5h-3.75v-2.25c0-.414.336-.75.75-.75h3v-4.5z"/>
+            </svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+      <!-- Columna 2: Mapa -->
+      <div class="footer-map">
+        <iframe
+          src="TU_URL_DE_GOOGLE_MAPS_AQUI"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
+    <!-- Copyright debajo -->
+    <div class="footer-copy">
+      <p>© 2025 Rutalircay Hostal. Todos los derechos reservados.</p>
+    </div>
   </footer>
-
-  <script type="text/javascript">
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      var form = event.target;
-      var formData = new FormData(form);
-      fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-      })
-      .then(function(response) {
-          if (response.ok) {
-              Swal.fire('¡Mensaje enviado!', 'Gracias por contactarnos.', 'success');
-              form.reset();
-          } else {
-              response.json().then(function(data) {
-                if (data.errors) {
-                  Swal.fire('Error', data.errors.map(error => error.message).join(", "), 'error');
-                } else {
-                  Swal.fire('Error', 'Hubo un error al enviar el mensaje.', 'error');
-                }
-              });
-          }
-      })
-      .catch(function(error) {
-          Swal.fire('Error', 'Hubo un error al enviar el mensaje: ' + error, 'error');
-      });
-    });
-  </script>
-  <!-- Código adicional (por ejemplo, smooth scrolling) -->
+  <!-- Tu JS separado -->
   <script src="js/script.js"></script>
 </body>
 </html>
