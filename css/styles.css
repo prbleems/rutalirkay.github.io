@@ -1,0 +1,246 @@
+/* Reset básico y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #555;
+    background: #f7f7f7;
+  }
+  
+  /* Contenedor General */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ff6600;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin-left: 30px;
+  }
+  
+  .nav-menu a {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    color: #ff6600;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('images/hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Para compensar la navbar fija */
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px 30px;
+    border-radius: 10px;
+    max-width: 700px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    background: #ff6600;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #e65c00;
+  }
+  
+  /* Secciones (About, Rooms, Contact) */
+  .about, .rooms, .contact {
+    padding: 80px 0;
+    background: #fff;
+    margin-top: 60px;
+  }
+  
+  .about h2, .rooms h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.4rem;
+    color: #333;
+  }
+  
+  /* About Section */
+  .about p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  
+  .about img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  /* Rooms Section */
+  .room-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .room {
+    flex: 1 1 300px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .room img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .room h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .room p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Contact Section */
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact form label {
+    font-weight: 500;
+    margin: 15px 0 5px;
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact form textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .contact form button {
+    margin-top: 25px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: #eee;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .footer-container p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .social a {
+    font-size: 1rem;
+    color: #ff6600;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .social a:hover {
+    color: #fff;
+  }
+  
+  /* Adaptabilidad (Responsive) */
+  @media (max-width: 768px) {
+    .nav-menu li {
+      margin-left: 15px;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .about h2, .rooms h2, .contact h2 {
+      font-size: 2rem;
+    }
+  }
+  
