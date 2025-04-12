@@ -42,6 +42,7 @@
     color: #ff6600;
   }
   
+  /* Menú */
   .nav-menu {
     list-style: none;
     display: flex;
@@ -56,10 +57,45 @@
     color: #555;
     font-weight: 500;
     transition: color 0.3s;
+    text-decoration: none; /* Quita subrayado */
   }
   
-  .nav-menu a:hover {
+  .nav-menu a:hover,
+  .nav-menu a:focus {
     color: #ff6600;
+    text-decoration: none;
+  }
+  
+  /* Botón de WhatsApp en la navbar */
+  .nav-menu .whatsapp-link {
+    background: #25d366;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s;
+    text-decoration: none;
+  }
+  
+  .nav-menu .whatsapp-link:hover {
+    background: #1ebe57;
+  }
+  
+  /* Botón de menú móvil (hamburguesa) */
+  .mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+  }
+  
+  .mobile-menu-toggle span {
+    display: block;
+    height: 3px;
+    background: #555;
+    border-radius: 3px;
   }
   
   /* Hero Section */
@@ -70,7 +106,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 60px; /* Para compensar la navbar fija */
+    padding-top: 60px; /* Compensa la navbar fija */
   }
   
   .hero-content {
@@ -102,13 +138,14 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background 0.3s;
+    text-decoration: none;
   }
   
   .btn:hover {
     background: #e65c00;
   }
   
-  /* Secciones (About, Rooms, Contact) */
+  /* Secciones: About, Rooms, Contact */
   .about, .rooms, .contact {
     padding: 80px 0;
     background: #fff;
@@ -204,6 +241,57 @@
     margin-top: 25px;
   }
   
+  /* Área de Contacto con dos columnas: formulario y WhatsApp */
+  .contact-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-wrapper form {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .whatsapp-box {
+    flex: 1;
+    max-width: 350px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .whatsapp-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .whatsapp-box p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  .btn-whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-whatsapp:hover {
+    background: #1ebe57;
+  }
+  
   /* Footer */
   footer {
     background: #333;
@@ -228,10 +316,34 @@
     color: #fff;
   }
   
-  /* Adaptabilidad (Responsive) */
+  /* Adaptabilidad: Navbar y menú móvil */
   @media (max-width: 768px) {
     .nav-menu li {
       margin-left: 15px;
+    }
+    /* Muestra el botón de menú móvil */
+    .mobile-menu-toggle {
+      display: flex;
+    }
+    /* Oculta el menú por defecto en móvil */
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    /* Muestra el menú al agregar la clase .active */
+    .nav-menu.active {
+      display: flex;
+    }
+    .nav-menu li {
+      margin: 10px 0;
     }
     .hero h1 {
       font-size: 2.2rem;
@@ -241,6 +353,14 @@
     }
     .about h2, .rooms h2, .contact h2 {
       font-size: 2rem;
+    }
+    .contact-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .whatsapp-box,
+    .contact-wrapper form {
+      max-width: 100%;
     }
   }
   
