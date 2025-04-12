@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Título -->
-  <title>Hostal Rutalircay – Confort y Naturaleza en Pucón</title>
+  <title>Hostal Rutalircay - Confort y Naturaleza en Pucón</title>
 
   <!-- Meta Descripción -->
   <meta name="description" content="Hostal Rutalircay en Pucón: habitaciones confortables, atención personalizada y un entorno natural único. Reserva tu estancia hoy.">
@@ -37,7 +37,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css">
-  <!-- SweetAlert2 (para alertas de formulario) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -60,10 +61,7 @@
           <li><a href="#contact">Contacto</a></li>
           <li>
             <a href="https://wa.me/521234567890" target="_blank" class="whatsapp-link">
-              <!-- SVG WhatsApp -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.52 3.48a11.9 11.9 0 0 0-16.84 0 11.9 11.9 0 0 0 0 16.84l-1.45 5.3 5.46-1.43a11.9 11.9 0 0 0 16.83-16.83zM12 21.75a9.74 9.74 0 0 1-4.96-1.37l-.35-.21-3.24.85.86-3.15-.23-.36A9.74 9.74 0 1 1 12 21.75zm5.38-7.88c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.18.2-.36.22-.67.07a7.02 7.02 0 0 1-2.07-1.28 7.67 7.67 0 0 1-1.42-1.75c-.15-.28 0-.43.12-.57.12-.12.28-.3.42-.45.14-.15.18-.26.28-.43.1-.18.05-.34-.02-.49-.07-.15-.68-1.65-.93-2.26-.24-.6-.49-.52-.68-.53h-.58a1.4 1.4 0 0 0-1.03.48c-.35.37-1.34 1.31-1.34 3.19s1.37 3.7 1.56 3.95c.18.24 2.7 4.2 6.56 5.88a28.3 28.3 0 0 0 2.54.66c.34.08.67.06.92.04.28-.02.86-.35.98-.69.12-.34.12-.63.08-.69-.04-.06-.15-.1-.3-.17z"/>
-              </svg>
+            <img class="icon-whatsapp" src="images/whatsapp.svg" alt="WhatsApp Icon">
               WhatsApp
             </a>
           </li>
@@ -136,31 +134,30 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-flex">
-      <!-- Columna 1: Información -->
-      <div class="footer-info">
-        <p><strong>Dirección:</strong> Camino Internacional s/n, Pucón, Chile</p>
-        <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
-        <p><strong>Horario de Atención:</strong> Lunes a Domingo, 8:00 – 22:00</p>
-        <div class="social">
-          <a href="https://www.instagram.com/rutalircay/?hl=es" target="_blank" class="social-link">
-            <!-- SVG Instagram -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.5-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
-            </svg>
-            Instagram
-          </a>
-          <a href="https://www.facebook.com/rutalircay" target="_blank" class="social-link">
-            <!-- SVG Facebook -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M13.5 2.25h-3A5.25 5.25 0 0 0 5.25 7.5v3H3v4.5h2.25v7.5H10.5v-7.5h3l.75-4.5h-3.75v-2.25c0-.414.336-.75.75-.75h3v-4.5z"/>
-            </svg>
-            Facebook
-          </a>
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="images/logo-footer.png" alt="Logo Rutalircay" class="footer-logo">
+        <p>¿Quieres aprender idiomas y disfrutar de Pucón? Nuestro hostal ofrece la mejor experiencia y servicios.</p>
+      </div>
+  
+      <!-- Columna 2: Enlaces y Newsletter -->
+      <div class="footer-col">
+        <h4>Atajos</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre nosotros</a></li>
+          <li><a href="#rooms">Habitaciones</a></li>
+          <li><a href="#contact">Contacto</a></li>
+
+        <div class="social-follow">
+          <h4>Siguenos</h4>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
-      <!-- Columna 2: Mapa -->
-      <div class="footer-map">
+      <!-- Columna 3: Mapa -->
+      <div class="footer-col">
+        <h4>Nos encontramos aqui</h4>
         <iframe
           src="TU_URL_DE_GOOGLE_MAPS_AQUI"
           allowfullscreen=""
@@ -169,11 +166,11 @@
         </iframe>
       </div>
     </div>
-    <!-- Copyright debajo -->
-    <div class="footer-copy">
+    <div class="footer-bottom">
       <p>© 2025 Rutalircay Hostal. Todos los derechos reservados.</p>
     </div>
   </footer>
+  
   <!-- Tu JS separado -->
   <script src="js/script.js"></script>
 </body>
